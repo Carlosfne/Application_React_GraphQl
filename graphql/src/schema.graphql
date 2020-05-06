@@ -1,0 +1,38 @@
+# type User {
+#   id: ID!
+#   name: String!
+#   email: String!
+# }
+type User {
+  id: ID!
+  nome: String!
+  cep: String!
+  rua: String!
+  numero: String!
+  bairro: String!
+  cidade: String!
+  uf: String!
+}
+
+type Query {
+ users: [User!]!
+#  user(id: ID!): User
+}
+
+# type Mutation {
+#  createUser(
+#    name: String!, 
+#    email: String!): User
+# }
+
+type Mutation {
+  createUser(
+    nome: String!,
+    cep: String!,
+    rua: String!,
+    numero: String!,
+    bairro: String!,
+    cidade: String!,
+    uf: String!
+  ): User
+}
